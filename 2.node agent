@@ -1,0 +1,17 @@
+pipeline{
+    agent none
+    stages{
+        stage ('Build'){
+            agent{
+                node{
+                    label 'java-slave'
+                    customworkspace "/home/siva/customwork"
+                }
+            }
+            steps{
+                echo 'helloworld'
+                sh 'cat siva.txt'
+            }
+        }
+    }
+}
