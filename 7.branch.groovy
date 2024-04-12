@@ -1,21 +1,25 @@
 pipeline {
     agent any
     stages {
-        stage ('Build')
+        stage ('Build') {
         steps {
             echo 'Build Pipeline'
         }
-        stage ('Scan')
+        }
+        stage ('Scan') {
         steps {
             echo 'Scanning Pipelines'
         }
-        stage ('Docker build')
+        } 
+        stage ('Docker build') {
         steps {
             echo 'Docker Pipelines'
         }
-        stage ('Dev Deploy')
+        }
+        stage ('Dev Deploy') {
         steps {
             echo 'Dev pipelines'
+        }
         }
     }
 }
